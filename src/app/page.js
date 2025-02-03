@@ -29,21 +29,58 @@ export default function Home() {
       ></Card>
       <Card
       informacion={{
-        titulo:"rounded-* shadow-*",
+        titulo:"rounded-* shadow-*, opacity-*",
         descripcion:`Estas dos clases las usamos para un estilo mas visual.
       - El rounded-* (rounded-tamaño) se usa con los tamaños predefinidos de Tailwind para redondear bordes.
       - El shadow-* (shadow-tamaño) se usa para aplicar una sombra exterior usando los tamaños predefinidos de Tailwind.
-        `,
-        clase:"bg-blue-300 rounded-lg shadow-xl",
-        informacionClase:"Esto es el ejemplo donde redondeamos el pre y le aplicamos una sombra"
+      - El opacity-* (opacity-porcentaje) se usa para hacer el elemento opaco
+      `,
+        clase:"bg-blue-300 rounded-lg shadow-xl opacity-50",
+        informacionClase:"Esto es el ejemplo donde redondeamos el p y le aplicamos una sombra"
       }}></Card>
       <Card
       informacion={{
-        titulo:"flex, justify-*, items-*",
-        descripcion:``,
-        clase: "",
-        informacionClase:""
+        titulo: "flex, justify-*, items-*",
+        descripcion: `Estas clases se usan para controlar el diseño flexible y la alineación de los elementos.
+        - El flex se usa para activar el modo de diseño flexible en un contenedor.
+        - El justify-* (justify-start, justify-center, justify-end) se usa para alinear los elementos horizontalmente dentro del contenedor flexible.
+        - El items-* (items-start, items-center, items-end) se usa para alinear los elementos verticalmente dentro del contenedor flexible.`,
+        clase: "flex justify-center items-center bg-yellow-300 h-24",
+        informacionClase: "Este ejemplo usa flexbox para centrar los elementos tanto horizontal como verticalmente."
       }}
+      ></Card>
+      <Card
+      informacion={{
+        titulo: "border-*, border-color",
+        descripcion: `Estas clases se usan para añadir un borde al contenedor y cambiar su color.
+        - El border-* (border-numero) se usa para añadir un borde a un contenerdor.
+        - El border-* (border-color-valor) se usa para cambiar el color del borde, añadiendole un color y un tono`,
+        clase: "border-4 border-yellow-600",
+        informacionClase: "Este ejemplo es un p al que agregaremos un borde color amarillo."
+      }}
+      ></Card>
+      <Card
+        informacion={{
+          titulo: "grid, grid-cols-*, gap-*",
+          descripcion: `Estas clases se usan para trabajar con el sistema de cuadricula y los espacios entre los elementos.
+          - El grid se usa para activar el sistema de cuadricula en un contenedor.
+          - El grid-cols-* (grid-cols-numero) se usa para definir cuantas columnas tendra la cuadricula.
+          - El gap-* (gap-tamaño) se usa para agregar un espacio entre los elementos dentro de la cuadrícula o el contenedor flexible.`,
+          clase: "grid grid-cols-3 gap-4",
+          informacionClase: "Este ejemplo crea una cuadricula con 3 columnas y un espacio de 4 entre los elementos."
+        }}
+      ></Card>
+      <Card
+        informacion={{
+          titulo: "animate-*, transition-*, z-*",
+          descripcion:`Estas clases son usadas para animaciones y transiciones en los elementos.
+          - El animate-* (animate-nombre) es usado para aplicar animaciones predefinidas en tailwind.
+          - El transition-* (transition-propiedades-duracion) se usa para añadir transiciones suaves a las propiedades seleccionadas.
+          - El z-* (z-valor) se usa para controlar el orden en el eje Z (profundidad) de los elementos.
+          `,
+          clase: "animate-bounce transition ease-in-out duration-500 z-10 bg-purple-300",
+          informacionClase:"Este ejemplo hace una transicion con una animacion de rebote y le pone profuncidad al p, esto permite pone elementos con mas o menos prioridad arriba o abajo de estos."
+        }}
       ></Card>
    </div>
   );
