@@ -72,14 +72,38 @@ export default function Home() {
       ></Card>
       <Card
         informacion={{
-          titulo: "animate-*, transition-*, z-*",
-          descripcion:`Estas clases son usadas para animaciones y transiciones en los elementos.
-          - El animate-* (animate-nombre) es usado para aplicar animaciones predefinidas en Tailwind.
-          - El transition-* (transition-propiedades-duracion) se usa para añadir transiciones suaves a las propiedades seleccionadas.
-          - El z-* (z-valor) se usa para controlar el orden en el eje Z (profundidad) de los elementos.
-          `,
-          clase: "animate-bounce transition duration-500 z-10 bg-purple-300",
-          informacionClase:"Este ejemplo hace una transicion con una animacion de rebote y le pone profuncidad al p, esto permite pone elementos con mas o menos prioridad arriba o abajo de estos."
+          titulo: "animate-*",
+          descripcion: `El animate-* (animate-nombre) es usado para aplicar animaciones predefinidas en Tailwind.`,
+          clase: "animate-bounce bg-purple-300",
+          informacionClase: "Este ejemplo aplica una animación de rebote al elemento, haciendo que se mueva hacia arriba y hacia abajo de manera continua."
+        }}
+      ></Card>
+      <Card
+        informacion={{
+          titulo: "transition-*",
+          descripcion: `El transition-* (transition-propiedades-duracion) se usa para añadir transiciones suaves a las propiedades seleccionadas.`,
+          clase: "",
+          informacionClase: "",
+          contenido: (
+            <div className="transition duration-500 bg-purple-300 hover:bg-purple-500 p-6 w-40 h-40 text-white text-center">
+              Pon el raton sobre mi
+            </div>
+          )
+        }}
+      ></Card>
+      <Card
+        informacion={{
+          titulo: "z-*",
+          descripcion: `El z-* (z-valor) se usa para controlar el orden en el eje Z (profundidad) de los elementos.`,
+          clase: "z-10 bg-purple-300",
+          informacionClase: "Este ejemplo establece la profundidad del elemento, poniéndolo por encima de otros elementos con menor valor en el eje Z.",
+          contenido: (
+            <div className="relative">
+              <div className="absolute z-10 bg-purple-300 p-6 w-40 h-40 text-white text-center">
+                Se sale del div al estar por encima
+              </div>
+            </div>
+          )
         }}
       ></Card>
    </div>
@@ -92,6 +116,7 @@ function Card({informacion}){
       <p className="text-2xl font-bold">{informacion.titulo}</p><br/>
       <p className="break-words text-xl whitespace-pre-line">{informacion.descripcion}</p><br/>
       <p className={`mb-1 break-words whitespace-pre-line ${informacion.clase}`}>{informacion.informacionClase}</p>
+      {informacion.contenido}    
     </div>
   );
 }
