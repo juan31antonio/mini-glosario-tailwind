@@ -74,7 +74,7 @@ export default function Home() {
         informacion={{
           titulo: "animate-*, transition-*, z-*",
           descripcion:`Estas clases son usadas para animaciones y transiciones en los elementos.
-          - El animate-* (animate-nombre) es usado para aplicar animaciones predefinidas en tailwind.
+          - El animate-* (animate-nombre) es usado para aplicar animaciones predefinidas en Tailwind.
           - El transition-* (transition-propiedades-duracion) se usa para añadir transiciones suaves a las propiedades seleccionadas.
           - El z-* (z-valor) se usa para controlar el orden en el eje Z (profundidad) de los elementos.
           `,
