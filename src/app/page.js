@@ -78,7 +78,7 @@ export default function Home() {
           - El transition-* (transition-propiedades-duracion) se usa para añadir transiciones suaves a las propiedades seleccionadas.
           - El z-* (z-valor) se usa para controlar el orden en el eje Z (profundidad) de los elementos.
           `,
-          clase: "animate-bounce transition ease-in-out duration-500 z-10 bg-purple-300",
+          clase: "animate-bounce transition duration-500 z-10 bg-purple-300",
           informacionClase:"Este ejemplo hace una transicion con una animacion de rebote y le pone profuncidad al p, esto permite pone elementos con mas o menos prioridad arriba o abajo de estos."
         }}
       ></Card>
